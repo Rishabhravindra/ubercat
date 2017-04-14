@@ -19,8 +19,8 @@ response = client.get_price_estimates(
     seat_count= numSeat
 )
 
-estimate = response.json.get('prices')
+estimates = response.json.get('prices')
 
 #save price estimates to json 
 with open('data.txt', 'w') as saveFile:
-	json.dump(estimate,saveFile)
+	json.dump(estimates,saveFile)
