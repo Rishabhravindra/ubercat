@@ -1,26 +1,17 @@
  <html>
     <head>
-        <title>Handle POST requests with Flask</title>
+        <title>Ubercat</title>
         <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
         <div id="container">
             <div class="title">
-                <h1>POST request with Flask</h1>
+                <h1>Estimate</h1>
             </div>
             <div id="content">
-                Hello <strong>{{name}}</strong> ({{email}})!
+                Hello, your starting lat is <strong>{{startLat}}</strong> and starting long is <strong>{{startLong}}</strong>. Your destination is <strong>{{dorms}}</strong> and <strong>{{numSeat}}</strong> seats will be occupied.
             </div>
-            <div class="title">
-                <h1>Flask code</h1>
-            </div>
-                <code><pre>
-@app.route('/hello/', methods=['POST'])
-def hello():
-    name=request.form['yourname']
-    email=request.form['youremail']
-    return render_template('form_action.html', name=name, email=email)
-                </pre></code>
+           
             </div>
         </div>
     </body>

@@ -1,30 +1,32 @@
 <html>
     <head>
-        <title>Handle POST requests with Flask</title>
+        <title>Ubercat</title>
         <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
         <div id="container">
             <div class="title">
-                <h1>POST request with Flask</h1>
+                <h1>Enter co-ordinates from staring point and enter number of passengers.</h1>
             </div>
             <div id="content">
                 <form method="post" action="{{ url_for('hello') }}">
-                  <label for="yourname">Please enter your name:</label>
-                  <input type="text" name="yourname" /><br />
-                  <label for="youremail">Please enter your email:</label>
-                  <input type="text" name="youremail" /><br />
+                  <label for="startLat">Please enter starting point latitude (within Cincinnati area):</label>
+                  <input type="number" step="0.0000000001" name="startLat" /><br />
+                  <label for="startLong">Please enter starting point longitude(within Cincinnati area):</label>
+                  <input type="number" step="0.0000000001" name="startLong" /><br />
+                  <label for="numSeat">Please enter number of seats</label>
+                  <input type="number" min="1" name="numSeat" /><br />
+                  <select name="dorms">
+                      <option value="danHall">Daniels Hall</option>
+                      <option value="dabHall">Dabney Hall</option>
+                      <option value="morHall">Morgens Hall </option>
+                      <option value="upa">UPA</option>
+                  </select>
                   <input type="submit" />
                 </form>
             </div>
-            <div class="title">
-                <h1>Flask code</h1>
-            </div>
-                <code><pre>
-@app.route('/')
-def form():
-    return render_template('form_submit.html')
-                </pre></code>
+
+               
             </div>
         </div>
     </body>

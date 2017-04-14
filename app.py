@@ -16,9 +16,15 @@ def form():
 # accepting: POST requests in this case
 @app.route('/hello/', methods=['POST'])
 def hello():
-    name=request.form['yourname']
-    email=request.form['youremail']
-    return render_template('form_action.html', name=name, email=email)
+    startLong=request.form['startLong']
+    startLat=request.form['startLat']
+    numSeat = request.form['numSeat']
+    dorms = request.form['dorms']
+    return render_template('form_action.html',
+     startLong=startLong,
+     startLat=startLat,
+     numSeat = numSeat,
+     dorms = dorms)
 
 # Run the app :)
 if __name__ == '__main__':
