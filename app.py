@@ -40,13 +40,14 @@ def hello():
 	    seat_count = numSeat
     )
     estimates = response.json.get('prices')
-    est = estimates[0]['estimate']
+    cabType = estimates[0]['localized_display_name']
     return render_template('form_action.html',
      startLong=startLong,
      startLat=startLat,
      numSeat = numSeat,
      dorms = dorms[dorm][2],
-     estimate = est)
+     estimates = estimates,
+     cabType = cabType)
 
 # Run the app :)
 if __name__ == '__main__':

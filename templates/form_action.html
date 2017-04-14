@@ -9,7 +9,19 @@
                 <h1>Estimate</h1>
             </div>
                 <div id="content">
-                    Hello, your starting lat is <strong>{{startLat}}</strong> and starting long is <strong>{{startLong}}</strong>. Your destination is <strong>{{dorms}}</strong> and <strong>{{numSeat}}</strong> seats will be occupied. The estimated price is $ {{estimate}} 
+                    Hello, your starting co-ordinates are <strong>({{startLat}}</strong>, <strong>{{startLong}})</strong>. Your destination is <strong>{{dorms}}</strong> and <strong>{{numSeat}}</strong> seats will be occupied. The distance from your starting point to <strong>{{dorms}}</strong> is <strong>{{estimates[0]['distance']}}</strong> miles.
+                    
+                    {% for estimate in estimates %}
+                    <p>
+                    The estimated price is for
+                         <strong>{{estimate['localized_display_name']}}</strong> is
+                         <strong>{{estimate['estimate']}}</strong>. 
+                    The lowest price estimate is 
+                         <strong>${{estimate['low_estimate']}}</strong>. 
+                    The highest price estimate is 
+                         <strong>${{estimate['high_estimate']}}</strong>.
+                    </p>
+                    {% endfor %} 
                 </div>
            
             </div>
