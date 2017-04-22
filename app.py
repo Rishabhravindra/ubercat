@@ -29,22 +29,22 @@ dorms  = {"danHall":[39.131810, -84.512075,"Daniels Hall"],
 def hello():
     startLong =request.form['startLong']
     startLat=request.form['startLat']
-    numSeat = int(request.form['numSeat'])
     dorm = request.form['dorms']
     
     response = client.get_price_estimates(
     	start_latitude= startLat,
 	    start_longitude=  startLong,
 	    end_latitude= dorms[dorm][0],
-	    end_longitude= dorms[dorm][1],
-	    seat_count = numSeat
-    )
+	    end_longitude= dorms[dorm][1]    )
+    
     estimates = response.json.get('prices')
+    
     cabType = estimates[0]['localized_display_name']
+    
+
     return render_template('form_action.html',
      startLong=startLong,
      startLat=startLat,
-     numSeat = numSeat,
      dorms = dorms[dorm][2],
      estimates = estimates,
      cabType = cabType)
