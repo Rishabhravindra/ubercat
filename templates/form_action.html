@@ -1,30 +1,52 @@
- <html>
-    <head>
-        <title>Ubercat</title>
-        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-    </head>
-    <body>
-        <div id="container">
-            <div class="title">
-                <h1>Estimate</h1>
-            </div>
-                <div id="content">
-                    Hello, your starting co-ordinates are <strong>({{startLat}}</strong>, <strong>{{startLong}})</strong>. Your destination is <strong>{{dorms}}</strong>. The distance from your starting point to <strong>{{dorms}}</strong> is <strong>{{estimates[0]['distance']}}</strong> miles.
-                    
-                    {% for estimate in estimates %}
-                    <p>
-                    The estimated price is for
-                         <strong>{{estimate['localized_display_name']}}</strong> is
-                         <strong>{{estimate['estimate']}}</strong>. 
-                    The lowest price estimate is 
-                         <strong>${{estimate['low_estimate']}}</strong>. 
-                    The highest price estimate is 
-                         <strong>${{estimate['high_estimate']}}</strong>.
-                    </p>
-                    {% endfor %} 
+<html>
+<head>
+    <title>Ubercat</title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='uikit.min.css') }}">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <div class="uk-container">
+        <h1 class="uk-heading-primary">
+              Price Estimates:
+            </h1>
+        <div class="uk-text-lead">
+                Hello, the trip details from <strong>{{startLoc}}</strong> to <strong> {{dorms}}</strong> are:
+                <br>
+        <strong>Distance: </strong> {{estimates[0]['distance']}} miles.
+        </div>
+
+        <br> 
+   
+        <div class="uk-flex">
+                {% for estimate in estimates %}
+                <div class="uk-card uk-card-default uk-margin-left uk-background-muted">
+                    <div class="uk-card-header">
+                        <div class="uk-grid uk-flex-middle" uk-grid>
+                            <div class="uk-width-expand">
+                                <h3 class="uk-card-title uk-margin-remove-bottom">
+                                {{estimate['localized_display_name']}}</h3> 
+                                 <p>({{estimate['estimate']}})</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-card-body">
+                        <p>
+                            <b>Low Price estimate:</b> ${{estimate['low_estimate']}}
+                        </p>
+                        <p>
+                            <b>High Price estimate:</b> ${{estimate['high_estimate']}}
+                        </p>
+                    </div>
+                    <div class="uk-card-footer">
+                         <a href="https://www.uber.com/en-IL/cities/cincinnati/" class="uk-button uk-button-text" target="_blank">KNOW MORE</a>
+                    </div>
                 </div>
-           
+                <br>
+                {% endfor %}
             </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>

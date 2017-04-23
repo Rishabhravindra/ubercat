@@ -5,9 +5,18 @@ from flask import Flask, render_template, request, url_for
 
 # Get session token and connect with Uber Python API
 import json
-from getKeys import session
+
+#import google maps API's python wrapper to convert address to co-ordinates (geocoding)
+import googlemaps
+
+#get keys from the Uber and Google Maps developer console
+from getKeys import session, gMapsKey
+
+#create clients to interact with the online servers
 from uber_rides.client import UberRidesClient
-client = UberRidesClient(session)
+uberClient = UberRidesClient(session)
+gmapsClient = googlemaps.Client(gMapsKey);
+
 
 # Initialize the Flask application
 app = Flask(__name__)
@@ -20,20 +29,24 @@ def form():
 # Define a route for the action of the form, for example '/hello/'
 # We are also defining which type of requests this route is 
 # accepting: POST requests in this case
+# print(geocode_result[0]["geometry"]["location"]["lat"])
 
+
+#Create python dictionary to store dorm co-ordinates and full names
 dorms  = {"danHall":[39.131810, -84.512075,"Daniels Hall"],
 		  "dabHall":[39.131858, -84.512654,"Dabney Hall"],
 		  "morHall":[39.135247, -84.511780,"Morgens Hall"],
 		  "upa":[39.128215, -84.514920, "University Park Apartments"]}
 @app.route('/hello/', methods=['POST'])
 def hello():
-    startLong =request.form['startLong']
-    startLat=request.form['startLat']
+    #get data from the submitted form
     dorm = request.form['dorms']
+    startLoc = request.form['startLoc'];
+    geocode_result = gmapsClient.geocode(startLoc)
     
-    response = client.get_price_estimates(
-    	start_latitude= startLat,
-	    start_longitude=  startLong,
+    response = uberClient.get_price_estimates(
+    	start_latitude= geocode_result[0]["geometry"]["location"]["lat"],
+	    start_longitude=  geocode_result[0]["geometry"]["location"]["lng"],
 	    end_latitude= dorms[dorm][0],
 	    end_longitude= dorms[dorm][1]    )
     
@@ -43,8 +56,7 @@ def hello():
     
 
     return render_template('form_action.html',
-     startLong=startLong,
-     startLat=startLat,
+     startLoc=startLoc,
      dorms = dorms[dorm][2],
      estimates = estimates,
      cabType = cabType)

@@ -1,32 +1,36 @@
 <html>
     <head>
         <title>Ubercat</title>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='uikit.min.css') }}">
         <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+
     </head>
     <body>
-        <div id="container">
-            <div class="title">
-                <h1>Enter co-ordinates from staring point and enter number of passengers.</h1>
-            </div>
-            <div id="content">
-                <form method="post" action="{{ url_for('hello') }}">
-                  <label for="startLat">Please enter starting point latitude (within Cincinnati area):</label>
-                  <input type="number" step="0.0000000001" name="startLat" /><br />
-                  <label for="startLong">Please enter starting point longitude(within Cincinnati area):</label>
-                  <input type="number" step="0.0000000001" name="startLong" /><br />
-                  <input type="number" min="1" name="numSeat" /><br />
-                  <select name="dorms">
-                      <option value="danHall">Daniels Hall</option>
-                      <option value="dabHall">Dabney Hall</option>
-                      <option value="morHall">Morgens Hall </option>
-                      <option value="upa">UPA</option>
-                  </select>
-                  <input type="submit" />
-                </form>
-            </div>
 
-               
-            </div>
+        <div class="uk-container" >
+        <div class="uk-column-1-3"></div>
+          <form  class ="uk-form-stacked" method="post" action="{{ url_for('hello') }}">
+              <legend class="uk-legend">Enter trip details:</legend>
+                <div class="uk-margin">
+                   <label class="uk-form-label" for="startLoc">Start Point (within Cincinnati area. Eg - 3238 Bishop St, Cincinnati, OH):</label>
+                   <span class="uk-form-icon" uk-icon="icon: user"></span>
+                   <div class="uk-form-controls">
+                    <input id="form-stacked-text" value="Cincinnati, OH" type="text" name="startLoc" class="uk-input uk-form-width-large" placeholder="Cincinnati, OH" /><br />
+                  </div>
+                </div>
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="dorm">Choose your dorm:</label>
+                      <div class="uk-form-controls uk-form-width-large">
+                        <select class="uk-select"  width ="50%" id="dorm" name="dorms">
+                          <option value="danHall">Daniels Hall</option>
+                          <option value="dabHall">Dabney Hall</option>
+                          <option value="morHall">Morgens Hall </option>
+                          <option value="upa">UPA</option>
+                        </select>                  
+                    </div>
+                </div>
+                    <button type="submit" class="uk-button uk-button-primary">SUBMIT</button>
+          </form>
         </div>
     </body>
 </html>
