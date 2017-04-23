@@ -1,5 +1,6 @@
 ##### UberCat - *CS2021 Final Project*
 [**Link**](https://ubercat.herokuapp.com/) | [**GitHub**](https://github.com/Rishabhravindra/ubercat) | [**Documentation**](google.com)
+
 **Author** - [Rishabh Ravindra](http://rishravi.me) 
 ##### **Introduction**
 ###### Overview
@@ -65,6 +66,7 @@ UberCat was only possible because of the generous open-source/public libraries o
 |UIkit| Front-end framework to quickly create web components|https://getuikit.com/docs/introduction|
 ###### Code Appendix
 [**GitHub**](https://github.com/Rishabhravindra/ubercat)
+
 [**Website**](https://ubercat.herokuapp.com)
 
 
