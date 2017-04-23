@@ -1,5 +1,5 @@
 # UberCat - *CS2021 Final Project*
-[**Link**](https://ubercat.herokuapp.com/) | [**GitHub**](https://github.com/Rishabhravindra/ubercat) | [**Documentation**](google.com)
+[**Link**](https://ubercat.herokuapp.com/) | [**GitHub**](https://github.com/Rishabhravindra/ubercat) 
 
 **Author** - [Rishabh Ravindra](http://rishravi.me) 
 ## **Introduction**
