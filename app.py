@@ -52,14 +52,12 @@ def hello():
     
     estimates = response.json.get('prices')
     
-    cabType = estimates[0]['localized_display_name']
     
 
     return render_template('form_action.html',
      startLoc=startLoc,
      dorms = dorms[dorm][2],
-     estimates = estimates,
-     cabType = cabType)
+     estimates = estimates)
 
 # Run the app :)
 if __name__ == '__main__':
