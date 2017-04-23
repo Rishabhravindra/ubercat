@@ -6,8 +6,23 @@
 
     </head>
     <body>
+<nav class="uk-container uk-navbar-container uk-margin" uk-navbar>
+    <div class="uk-navbar-left">
 
+        <a class="uk-navbar-item uk-logo" href="#"><b>UberCat</b></a>
+
+        <ul class="uk-navbar-nav">
+            <li>
+                <a href="#">
+                    <span class="uk-icon uk-margin-small-right" href="#" uk-icon="icon: star"></span>
+                    DOCS
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
         <div class="uk-container" >
+
         <div class="uk-column-1-3"></div>
           <form  class ="uk-form-stacked" method="post" action="{{ url_for('hello') }}">
               <legend class="uk-legend">Enter trip details:</legend>
