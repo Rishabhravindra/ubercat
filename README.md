@@ -54,9 +54,11 @@ Another improvement is to update the file structure. Currently, the files are al
 - **Rishabh Ravindra**
 
 *The project was a great learning experience and a good opportunity to delve into the world of Python. I worked on creating a client for Uber's API and sending and getting information from it. My teammate, Ananya used Google Maps API to geocode (convert addres to co-ordinates) the starting address provided by the user. I then took that trip data and called the '''get_price''' method to get details.
-The API responded back with a JSON object which had all the details of the trip. My next task was to 
+The API responded back with a JSON object which had all the details of the trip. My next task was to extract the required data (the Uber type and prices) and send it to Flask to render it in the results.*
 
-Another maajor responsibility I undertook was to deploy the python app to the cloud hosting platform, Heroku. Doing so gave the project a near-completion status as not only did we get price estimates but also set up an interface for others to use it. One key thing that I learned through the project is reading the documentation. While using another organization's code, it is important to be well versed with the restrictions and how-to's of an API.*
+*Another major responsibility I undertook was to deploy the python app to the cloud hosting platform, Heroku.  Doing so gave the project a near-completion status as not only did we get price estimates but also set up an online presence for others to use it. I had to read Heroku's documentation closely to understand how apps are deployed on its platform and how we could set our python app up. I installed Gunicorn that started a Python HTTP server. Extra configuration files were added to authorize the app and run proper commands to make the app working online.*
+
+*One key thing that I learned through the project, more than Python itself, was reading the documentation of a 3rd party API/framework. Heroku had a really bad set of documented instructions, and I had to comb through a lot of lines to get what I was looking for. While using another organization's code, it is important to be well versed with the restrictions and how-to's of an API.*
 
 
 ## Bibliography
