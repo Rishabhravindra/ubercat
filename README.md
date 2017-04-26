@@ -58,7 +58,7 @@ The API responded back with a JSON object which had all the details of the trip.
 
 *Another major responsibility I undertook was to deploy the python app to the cloud hosting platform, Heroku.  Doing so gave the project a near-completion status as not only did we get price estimates but also set up an online presence for others to use it. I had to read Heroku's documentation closely to understand how apps are deployed on its platform and how we could set our python app up. I installed Gunicorn that started a Python HTTP server. Extra configuration files were added to authorize the app and run proper commands to make the app working online.*
 
-*One key thing that I learned through the project, more than Python itself, was reading the documentation of a 3rd party API/framework. Heroku had a really bad set of documented instructions, and I had to comb through a lot of lines to get what I was looking for. While using another organization's code, it is important to be well versed with the restrictions and how-to's of an API.*
+*One key thing that I learned through the project, more than Python itself, was reading the documentation of a 3rd party API/framework. Heroku had a really bad set of documented instructions, and I had to comb through a lot of lines to get what I was looking for. While using another organization's code, it is important to be well versed with the restrictions and how-to's of an API. And that is why it is important to know how to read a documentation and make good use out of it.*
 
 
 ## Bibliography
