@@ -41,6 +41,7 @@ dorms  = {"danHall":[39.131810, -84.512075, "Daniels Hall"],
           "sidHall":[39.128981, -84.517728, "Siddall Hall"],
           "calHall":[39.128537, -84.516699, "Calhoun Hall"],
           "strHall":[39.131342, -84.522076, "Stratford Heights"],
+          "turHall":[39.132313, -84.511764, "Turner Hall"]
           }
 @app.route('/hello/', methods=['POST'])
 def hello():
