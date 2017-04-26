@@ -48,6 +48,12 @@ Another improvement is to update the file structure. Currently, the files are al
 ![Get input from user](https://raw.githubusercontent.com/Rishabhravindra/ubercat/master/img/input.PNG)
 *Results page with availbale fare rates for all types of UBERs running in Cincinnati*
 ![Uber fare estimates](https://raw.githubusercontent.com/Rishabhravindra/ubercat/master/img/results.PNG)
+
+## Division of Group Work
+-**Ananya Nijhawan** - *I learned a lot*
+-**Rishabh Ravindra** - *I also learned a lot*
+
+
 ## Bibliography
 
 A number of online resources and articles were instrumental in converting the program idea into fruition:
