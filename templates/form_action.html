@@ -3,7 +3,6 @@
     <title>UberCat</title>
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='uikit.min.css') }}">
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-
 </head>
 <body>
 <nav class="uk-container uk-navbar-container uk-margin" uk-navbar>
@@ -30,9 +29,7 @@
                 <br>
         <strong>Distance: </strong> {{estimates[0]['distance']}} miles.
         </div>
-
-        <br> 
-   
+        <br>
         <div class="uk-flex">
                 {% for estimate in estimates %}
                 <div class="uk-card uk-card-default uk-margin-left uk-background-muted">
@@ -40,7 +37,7 @@
                         <div class="uk-grid uk-flex-middle" uk-grid>
                             <div class="uk-width-expand">
                                 <h3 class="uk-card-title uk-margin-remove-bottom">
-                                {{estimate['localized_display_name']}}</h3> 
+                                {{estimate['localized_display_name']}}</h3>
                                  <p>({{estimate['estimate']}})</p>
                             </div>
                         </div>
@@ -63,5 +60,4 @@
         </div>
     </div>
 </body>
-
 </html>
