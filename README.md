@@ -50,8 +50,8 @@ Another improvement is to update the file structure. Currently, the files are al
 ![Uber fare estimates](https://raw.githubusercontent.com/Rishabhravindra/ubercat/master/img/results.PNG)
 
 ## Division of Group Work
--**Ananya Nijhawan** - *I learned a lot*
--**Rishabh Ravindra** - *I also learned a lot*
+- **Ananya Nijhawan** - *I learned a lot*
+- **Rishabh Ravindra** - *I also learned a lot*
 
 
 ## Bibliography
