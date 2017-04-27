@@ -41,6 +41,8 @@ Also, we improvised on the front-end. We had a basic html form input and a basic
 ### Future improvements
 One improvement that immediately comes into mind is integrating Lyft's API to compare the pricess. This feature would actually yield more value to the application as users have to always switch between the two apps to get the price estimates. We did not implement this feature in the current project because Lyft does not have an official Python client currently and does not provide ride estimates through its API.
 
+To improve the user experience, we can also embed a Google map to the results page which shows the route from the starting point to the destination. This would give the user a visualization of their trip and make trips if needed. This brings us to another future feature which is booking the ride from the app itself. Using Oauth2, we can authenticate the user and let the user ride a cab right after knowing the price estimates.  
+
 Another improvement is to update the file structure. Currently, the files are all in one folder. Since the app involves a Model-View-Controller structure, the folders should reflect it. This would help any future developers working on it understand the code better. 
 
 ### Screenshots 
