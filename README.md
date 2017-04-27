@@ -10,7 +10,21 @@ UberCat is an online Uber fare estimator for students at UC. The idea was inspir
   - Enter your starting address
   - Select your dorm
   - Get price estimates for all types of Ubers
- 
+  ### Deploying the application
+The app is already deployed on Heroku at this [link](https://ubercat.herokuapp.com/) and as such requires no manual installation to build. However, should it be required to be tested manually, then just clone the repo.
+```
+git clone https://github.com/Rishabhravindra/ubercat.git
+```
+
+Activate your virtualenv, and install the packages through the console
+```
+pip install -r requirements.txt
+```
+
+Finally, run it by
+```
+python app.py
+```
 ### API/Framework Selection Process
 The first choice we made was to use Uber's Python API to get price estimates. This was a no-brainer as Uber officially supported the Python API.
 
