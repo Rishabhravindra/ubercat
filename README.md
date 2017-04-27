@@ -50,7 +50,15 @@ Another improvement is to update the file structure. Currently, the files are al
 ![Uber fare estimates](https://raw.githubusercontent.com/Rishabhravindra/ubercat/master/img/results.PNG)
 
 ## Division of Group Work
-- **Ananya Nijhawan** - *I learned a lot*
+- **Ananya Nijhawan** 
+
+*My primary contribution was in setting up the Flask interface for taking in the input from user and converting the input into a form that could be accessed by Uber's API. I also handled the routing for the web app. So from creating a **GET** request to display the form to the **POST** request which passed on the information to the results page, I managed it. I found the Flask documentation very useful and there was a lot of support by other developers on online platforms like Stack Overflow. 
+
+*Another feature that I worked on was geocoding. Initially, our input form took the starting point latitudes and longitudes to set the initial co-ordinates. I felt this was not user-friendly at all. So to improve the user experience, I suggested we inlclude the python client for Google Maps and use geocoding to convert the address string to a pair of co-ordinates. This improved the user experience and now I feel more confident in trying new technologies - something I was always skeptical of.*
+
+
+
+
 - **Rishabh Ravindra**
 
 *The project was a great learning experience and a good opportunity to delve into the world of Python. I worked on creating a client for Uber's API and sending and getting information from it. My teammate, Ananya used Google Maps API to geocode (convert addres to co-ordinates) the starting address provided by the user. I then took that trip data and called the '''get_price''' method to get details.
