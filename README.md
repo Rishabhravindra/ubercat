@@ -56,7 +56,7 @@ Another improvement is to update the file structure. Currently, the files are al
 
 *Another feature that I worked on was geocoding. Initially, our input form took the starting point latitudes and longitudes to set the initial co-ordinates. I felt this was not user-friendly at all. So to improve the user experience, I suggested we inlclude the python client for Google Maps and use geocoding to convert the address string to a pair of co-ordinates. This improved the user experience and now I feel more confident in trying new technologies - something I was always skeptical of.*
 
-
+*This project, just as much it was about python, was about going to uncharted territories. I had previously worked briefly with the Google Maps Javascript API but had no other experience with working qwith 3-rd party APIS. Also, I had not touched Flask before nor did I know about html forms and routing data. After the project, though, I feel more confident in my skills in Flask and Maps API and more importantly, trying new technologies*
 
 
 - **Rishabh Ravindra**
